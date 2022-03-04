@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DevRadar/static/css/main.5a1d9f1f.css",
+    "main.js": "/DevRadar/static/js/main.e2ee8cab.js",
+    "index.html": "/DevRadar/index.html",
+    "main.5a1d9f1f.css.map": "/DevRadar/static/css/main.5a1d9f1f.css.map",
+    "main.e2ee8cab.js.map": "/DevRadar/static/js/main.e2ee8cab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a1d9f1f.css",
+    "static/js/main.e2ee8cab.js"
+  ]
+}
