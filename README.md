@@ -47,7 +47,7 @@ Assim que o processo terminar, automaticamente será aberta no seu navegador a p
 Veja mais em [backend/README.md](./backend) para informações sobre o servidor e sua arquitetura.
 
 ## Frontend
-Veja mais em [frontend/README.md](./frontend) para informações sobre client Web e os padrões. O Frontend desenvolvido no Dia 3 (com o [desafio](DESAFIOS.md) feito) ficou assim:
+Veja o projeto rodando em [https://williamjesusdev.github.io/DevRadar](https://williamjesusdev.github.io/DevRadar) ou em [frontend/README.md](./frontend) para informações sobre client Web e os padrões. O Frontend desenvolvido no Dia 3 (com o [desafio](DESAFIOS.md) feito) ficou assim:
 
 <img align="center" src="./static/frontend.gif"></img>
 
@@ -117,7 +117,7 @@ Para testar a API do DevRadar, baixe e instale o [Insomnia](https://insomnia.res
 <br>
 
 - `feature 05`
-  - deploy do projeto para o heroku de ambos projetos [backend](https://backend-devradar.herokuapp.com) e [frontend](https://web-devradar.herokuapp.com)
+  - deploy do projeto para o heroku de ambos projetos [backend](https://w-devradar.herokuapp.com) e [frontend](https://williamjesusdev.github.io/DevRadar/)
 <br><br>
 
 #### PROJETO FINALIZADO | `20/01/2020`

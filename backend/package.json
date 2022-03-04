@@ -4,18 +4,22 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec sucrase-node src/index.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "deploy": "git init && git add . && git commit -am \"make it better\" && heroku git:remote -a w-devradar && git push heroku master -f",
+    "postdeploy": "rmdir /s /q .git"
   },
   "dependencies": {
     "axios": "^0.26.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.8.7",
     "socket.io": "^4.4.1"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
   }
 }

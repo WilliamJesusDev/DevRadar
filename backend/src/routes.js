@@ -6,7 +6,7 @@ const SearchController = require("./controllers/SearchController");
 const routes = Router();
 
 routes.get("/", (req, res) => {
-  res.json({ message: "server is running" });
+  return res.status(200).json({ message: "success", project: "DevRadar" });
 });
 
 routes.get("/devs", DevController.index);

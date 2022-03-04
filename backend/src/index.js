@@ -4,8 +4,7 @@ const http = require("http");
 const cors = require("cors");
 require("dotenv").config();
 
-process.env.URL =
-  process.env.LOCALE === "HOME" ? process.env.HOME_URL : process.env.WORK_URL;
+const { MONGOOSE, LOCALE, HOME_URL, WORK_URL, PORT } = process.env;
 
 const routes = require("./routes");
 const { setupWebSocket } = require("./websocket");
@@ -15,20 +14,21 @@ const server = http.Server(app);
 
 setupWebSocket(server);
 
-mongoose.connect(process.env.MONGOOSE, {
+mongoose.connect(MONGOOSE, {
   useCreateIndex: true,
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-const PORT = process.env.NODE_PORT || 3333;
-server.listen(PORT, () => {
+app.listen(PORT || 3333, () => {
   console.log(
-    "\x1b[42m\x1b[34m%s\x1b[0m",
-    `[running] server on http://${process.env.URL}`
+    "\x1b[34m%s\x1b[0m",
+    `[running] server on http://localhost:${PORT} | http://${
+      LOCALE === "HOME" ? HOME_URL : WORK_URL
+    }:${PORT}`
   );
 });
